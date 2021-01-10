@@ -194,3 +194,10 @@ def AnnotateLine(xs, ys, color='0.4', weight='normal', fontsize=12, offset=10, d
                         AnnotatePointRight(coord, color=color,
                                            weight=weight, fontsize=fontsize,
                                            offset=offset, decpoints=decpoints)
+
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
