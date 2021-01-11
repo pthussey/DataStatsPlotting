@@ -76,6 +76,8 @@ def AnnotateBars(rects, color='0.4', orient='v', offset=3, weight='normal', digi
 
 
 def AnnotatePointAbove(coord, color='0.4', weight='normal', fontsize=12, ha='center', offset=10, decpoints=1):
+    """Pass coord as an x, y tuple.
+    """
     form = '{:.' + str(decpoints) + 'f}'
     plt.annotate(form.format(coord[1]),
                  xy=(coord), xytext=(0, offset),
