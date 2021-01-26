@@ -31,6 +31,7 @@ def SetParams(font='Malgun Gothic', basesize=12, basecolor='0.4'):
     plt.rcParams["ytick.left"]: True
     plt.rcParams["xtick.bottom"]: True
     plt.rcParams["axes.labelpad"] = basesize
+    plt.rcParams['axes.unicode_minus'] = False if font == 'Malgun Gothic' else True
 
 
 def Despine(ax, spines='topright'):
@@ -102,7 +103,7 @@ def AnnotateBars(rects, color='0.4', orient='v', offset=3, weight='normal', font
 
 
 def AnnotatePointAbove(coord, color='0.4', weight='normal', fontsize=12, ha='center', offset=10, digits=1):
-    """Adds a label above a point. Must pass the coordinate as a tuple.
+    """Adds a label above a point (x,y), for the y-value of the point. Must pass the coordinate as a tuple.
 
     Args:
         coord (tuple): An x,y coordinate.
@@ -123,7 +124,7 @@ def AnnotatePointAbove(coord, color='0.4', weight='normal', fontsize=12, ha='cen
 
 
 def AnnotatePointBelow(coord, color='0.4', weight='normal', fontsize=12, ha='center', offset=10, digits=1):
-    """Adds a label below a point. Must pass the coordinate as a tuple.
+    """Adds a label below a point (x,y), for the y-value of the point. Must pass the coordinate as a tuple.
 
     Args:
         coord (tuple): An x,y coordinate.
@@ -144,7 +145,7 @@ def AnnotatePointBelow(coord, color='0.4', weight='normal', fontsize=12, ha='cen
 
 
 def AnnotatePointLeft(coord, color='0.4', weight='normal', fontsize=12, va='center', offset=10, digits=1):
-    """Adds a label to the left of a point. Must pass the coordinate as a tuple.
+    """Adds a label to the left of a point (x,y), for the y-value of the point. Must pass the coordinate as a tuple.
 
     Args:
         coord (tuple): An x,y coordinate.
@@ -165,7 +166,7 @@ def AnnotatePointLeft(coord, color='0.4', weight='normal', fontsize=12, va='cent
 
 
 def AnnotatePointRight(coord, color='0.4', weight='normal', fontsize=12, va='center', offset=10, digits=1):
-    """Adds a label to the right of a point. Must pass the coordinate as a tuple.
+    """Adds a label to the right of a point (x,y), for the y-value of the point. Must pass the coordinate as a tuple.
 
     Args:
         coord (tuple): An x,y coordinate.
